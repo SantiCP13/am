@@ -1,0 +1,529 @@
+/* General */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  
+  line-height: 1.6; /* Mejora la legibilidad */
+}
+
+/* Títulos */
+h1, h2 {
+  color: #004085;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.4em;
+  margin-top: 20px;
+}
+
+/* Formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+select,
+textarea {
+  width: 95%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: #ffffff;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+textarea {
+  resize: none;
+  height: 120px;
+  font-family: sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+button, .form-submit-button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+button:hover, .form-submit-button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: scale(1.02);
+}
+
+button:active, .form-submit-button:active {
+  transform: scale(0.98);
+}
+
+/* Contenedor de los botones */
+.contenedor {
+  display: flex;                /* Usar flexbox para alinear los botones */
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Contenedor del login */
+.login-container {
+  display: flex; /* Usar flexbox para el diseño */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  flex-direction: column; /* Colocar los elementos en columna */
+  max-width: 400px; /* Limitar el ancho del formulario */
+  height: 80%;
+  width: 100%; /* Ajustar al ancho disponible */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra para destacarlo */
+  background-color: #fff; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  margin: 0 auto; /* Centrarse horizontalmente */
+  position: absolute; /* Posicionamiento absoluto */
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Ajustar para centrar perfectamente */
+}
+
+/* Estilos de los botones */
+.primary-btn, .secondary-btn {
+  padding: 15px 16px;
+  font-size: 18px;
+  border-radius: 6px;
+  
+}
+
+.form-submit-button {
+  padding: 12px 16px; /* Ajuste uniforme del espaciado */
+  font-size: 16px; /* Tamaño proporcional del texto */
+  border-radius: 6px; /* Bordes redondeados */
+  width: 100%; /* Ocupar el ancho completo */
+  max-width: 350px; /* Limitar el ancho máximo */
+  margin-top: 15px; /* Separación del resto de los elementos */
+  background-color: #007bff; /* Fondo azul */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  cursor: pointer; /* Cursor en puntero */
+  transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.reset-link{
+  margin-top: 20px;
+  color: gray;
+}
+
+.reset-link:hover{
+  color: #003f7f;
+}
+/* Tablas */
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.task-table th,
+.task-table td {
+  text-align: left;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.task-table th {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 600;
+}
+
+.task-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.task-table tr:hover {
+  background-color: #eef3fb;
+}
+
+.task-table td {
+  border-bottom: 1px solid #ddd;
+}
+/* Espacio entre los botones de editar y completar */
+.task-table td button {
+  margin-right: 10px; /* Aumenta o ajusta el valor según lo necesites */
+}
+
+/* Estados de tareas */
+.task-completed {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-pending {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Reporte de facturas */
+.report-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.report-table th {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+}
+
+.report-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.report-table tfoot {
+  background-color: #f1f1f1;
+  font-size: 16px;
+}
+
+.report-table tfoot td {
+  border-top: 2px solid #007bff;
+  padding: 12px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Separadores */
+hr {
+  border: none;
+  border-top: 1px solid rgba(128, 128, 128, 0.653);
+  margin: 30px 0;
+}
+
+.hidden-column {
+  visibility: hidden;
+}
+
+/* Contenedor de los títulos */
+.task-titles {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+}
+
+.task-title {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #004085;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.task-title.active {
+  color: #007bff;
+  border-bottom: 4px solid #007bff;
+}
+
+.active-section {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.header-titles {
+  display: flex;
+  justify-content: space-around; /* Distribuir los títulos equitativamente */
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px; /* Aumentar el margen inferior para separar de otros elementos */
+  padding: 10px 0; /* Agregar espacio superior e inferior */
+  border-bottom: 2px solid #ddd; /* Agregar una línea de separación debajo de los títulos */
+}
+
+.header-titles h2 {
+  margin: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 28px; /* Tamaño de fuente más grande para un look más profesional */
+  text-align: center;
+}
+
+.header-titles h1:hover {
+  color: #0056b3; /* Cambio de color al pasar el cursor */
+  
+}
+
+.header-titles .active-section {
+  color: #007bff;
+  font-weight: bold; /* Aseguramos que el título activo se destaque */
+  border-bottom: 3px solid #007bff; /* Subrayado para indicar que está activo */
+  padding-bottom: 5px; /* Espacio debajo del texto para el subrayado */
+}
+
+/* Sección de las tareas */
+.tasks-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Columnas de tareas */
+.task-column {
+  flex: 1;
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título de columnas */
+.task-column h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Tareas individuales */
+.task {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.task:hover {
+  transform: scale(1.02);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones dentro de las tareas */
+.task-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.complete-btn,
+.comment-btn,
+.revert-btn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.complete-btn:hover,
+.comment-btn:hover,
+.revert-btn:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+  transform: scale(1.05);
+}
+
+.complete-btn:active,
+.comment-btn:active,
+.revert-btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* Media Queries para Responsividad */
+
+/* Pantallas extra pequeñas (≤480px) */
+@media (max-width: 480px) {
+  body {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1em;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%; /* Botones ocupan todo el ancho */
+    padding: 10px;
+  }
+
+  .task-title {
+    font-size: 0.9em;
+    padding: 5px 10px;
+  }
+
+  .task-table, .report-table {
+    font-size: 12px;
+    overflow-x: auto; /* Habilitar scroll horizontal si es necesario */
+  }
+}
+
+/* Pantallas pequeñas (móviles ≤600px) */
+@media (max-width: 600px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.6em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 45%; /* Botones ocupan más espacio */
+  }
+
+
+
+  .task-title {
+    font-size: 1em;
+    padding: 8px 16px;
+  }
+
+  .task-table, .report-table {
+    font-size: 14px;
+    overflow-x: auto;
+  }
+}
+
+/* Pantallas medianas (tabletas ≤768px) */
+@media (max-width: 768px) {
+  body {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 40%;
+  }
+
+
+  .task-title {
+    font-size: 1.1em;
+    padding: 10px 20px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 10px 12px;
+  }
+
+  .task-table, .report-table {
+    font-size: 15px;
+    overflow-x: auto;
+  }
+}
+
+/* Pantallas grandes (desktops ≥1024px) */
+@media (min-width: 1024px) {
+  body {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 20%;
+  }
+
+
+  .task-title {
+    font-size: 1.2em;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 15px;
+  }
+}
+
+/* Pantallas extra grandes (≥1440px) */
+@media (min-width: 1440px) {
+  body {
+    margin: 30px;
+    padding: 30px;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 15%; /* Botones más compactos */
+  }
+
+  .task-title {
+    font-size: 1.4em;
+    padding: 15px 30px;
+  }
+
+  .task-table th,
+  .task-table td {
+    padding: 20px;
+    font-size: 18px;
+  }
+}
+
+
